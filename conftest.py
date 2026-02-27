@@ -23,7 +23,7 @@ def browser(request):
 
     elif browser_name == "firefox":
         options = FirefoxOptions()
-        options.add_experimental_option('prefs', {'intl.accept_languages': language})
+        options.set_preference('intl.accept_languages', language)
 
         print("--- Starting Firefox browser ---")
         browser = webdriver.Firefox(options=options)
