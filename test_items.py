@@ -7,7 +7,7 @@ class TestAddBasketButton:
 
     def test_site_contains_add_to_basket_button(self, browser):
         browser.get(self.link)
-        time.sleep(30)
+        # time.sleep(30)
 
         browser.implicitly_wait(10)
 
