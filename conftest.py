@@ -18,18 +18,18 @@ def browser(request):
         options = ChromeOptions()
         options.add_experimental_option('prefs', {'intl.accept_languages': language})
 
-        print("--- Starting Chrome browser ---")
+        print("\n--- Starting Chrome browser ---")
         browser = webdriver.Chrome(options=options)
 
     elif browser_name == "firefox":
         options = FirefoxOptions()
         options.set_preference('intl.accept_languages', language)
 
-        print("--- Starting Firefox browser ---")
+        print("\n--- Starting Firefox browser ---")
         browser = webdriver.Firefox(options=options)
 
     yield browser
-    print("--- Quit browser ---")
+    print("\n--- Quit browser ---")
     time.sleep(2)
     browser.quit()
 
